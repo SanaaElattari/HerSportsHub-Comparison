@@ -1,0 +1,99 @@
+[
+    {
+      "club": "Portland Thorns FC",
+      "players": [
+        {
+          "name": "Sophia Smith",
+          "position": "Forward",
+          "country": "USA",
+          "goals": 12,
+          "assists": 5,
+          "appearances": 18,
+          "minutesPlayed": 1400
+        },
+        {
+          "name": "Christine Sinclair",
+          "position": "Forward",
+          "country": "Canada",
+          "goals": 7,
+          "assists": 3,
+          "appearances": 17,
+          "minutesPlayed": 1300
+        },
+        {
+          "name": "Meghan Klingenberg",
+          "position": "Defender",
+          "country": "USA",
+          "goals": 2,
+          "assists": 6,
+          "appearances": 19,
+          "minutesPlayed": 1600
+        }
+      ]
+    },
+    {
+      "club": "North Carolina Courage",
+      "players": [
+        {
+          "name": "Megan Rapinoe",
+          "position": "Midfielder",
+          "country": "USA",
+          "goals": 9,
+          "assists": 8,
+          "appearances": 16,
+          "minutesPlayed": 1350
+        },
+        {
+          "name": "Debinha",
+          "position": "Forward",
+          "country": "Brazil",
+          "goals": 10,
+          "assists": 4,
+          "appearances": 18,
+          "minutesPlayed": 1450
+        },
+        {
+          "name": "Crystal Dunn",
+          "position": "Defender",
+            "country": "USA",
+          "goals": 3,
+          "assists": 5,
+          "appearances": 19,
+          "minutesPlayed": 1500
+        }
+      ]
+    },
+    {
+      "club": "OL Reign",
+      "players": [
+        {
+          "name": "Jodie Taylor",
+          "position": "Forward",
+          "country": "England",
+          "goals": 8,
+          "assists": 3,
+          "appearances": 17,
+          "minutesPlayed": 1380
+        },
+        {
+          "name": "Bethany Balcer",
+          "position": "Forward",
+          "country": "USA",
+          "goals": 6,
+          "assists": 2,
+          "appearances": 15,
+          "minutesPlayed": 1200
+        },
+        {
+          "name": "Ally Watt",
+          "position": "Midfielder",
+          "country": "USA",
+          "goals": 4,
+          "assists": 5,
+          "appearances": 16,
+          "minutesPlayed": 1300
+        }
+      ]
+    }
+  ]
+  

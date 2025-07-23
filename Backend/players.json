@@ -1,0 +1,75 @@
+[
+    {
+      "name": "Alex Morgan",
+      "country": "USA",
+      "position": "Forward",
+      "goals": 121,
+      "assists": 47,
+      "appearances": 215,
+      "minutesPlayed": 14890
+    },
+    {
+      "name": "Sam Kerr",
+      "country": "Australia",
+      "position": "Forward",
+      "goals": 66,
+      "assists": 30,
+      "appearances": 125,
+      "minutesPlayed": 10240
+    },
+    {
+      "name": "Marta",
+      "country": "Brazil",
+      "position": "Forward",
+      "goals": 112,
+      "assists": 55,
+      "appearances": 171,
+      "minutesPlayed": 13720
+    },
+    {
+      "name": "Vivianne Miedema",
+      "country": "Netherlands",
+      "position": "Forward",
+      "goals": 95,
+      "assists": 41,
+      "appearances": 115,
+      "minutesPlayed": 9850
+    },
+    {
+      "name": "Lucy Bronze",
+      "country": "England",
+      "position": "Defender",
+      "goals": 13,
+      "assists": 22,
+      "appearances": 115,
+      "minutesPlayed": 9700
+    },
+    {
+      "name": "Wendie Renard",
+      "country": "France",
+      "position": "Defender",
+      "goals": 35,
+      "assists": 15,
+      "appearances": 150,
+      "minutesPlayed": 12500
+    },
+    {
+      "name": "Rose Lavelle",
+      "country": "USA",
+      "position": "Midfielder",
+      "goals": 24,
+      "assists": 18,
+      "appearances": 92,
+      "minutesPlayed": 6980
+    },
+    {
+      "name": "Aitana Bonmatí",
+      "country": "Spain",
+      "position": "Midfielder",
+      "goals": 19,
+      "assists": 25,
+      "appearances": 89,
+      "minutesPlayed": 7320
+    }
+  ]
+  
