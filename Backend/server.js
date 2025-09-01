@@ -7,7 +7,7 @@ import cors from "cors";
 
 const app = express();
 app.use(cors());
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 let offenseData = [];
 let defenseData = [];
@@ -87,6 +87,6 @@ app.get("/players", (req, res) => {
 // Start server
 loadData().then(() => {
   app.listen(PORT, () => {
-    console.log(`🚀 Server running at http://localhost:${PORT}`);
+    console.log(`🚀 Server running on port ${PORT}`);
   });
 });
