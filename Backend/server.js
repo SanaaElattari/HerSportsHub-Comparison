@@ -4,10 +4,13 @@ import path from "path";
 import csv from "csv-parser";
 import express from "express";
 import cors from "cors";
+import path from "path";
 
 const app = express();
 app.use(cors());
 const PORT = process.env.PORT || 3001; 
+
+app.use(express.static(path.join(__dirname, "frontend", "build"))); 
 
 let offenseData = [];
 let defenseData = [];
@@ -82,6 +85,10 @@ app.get("/players", (req, res) => {
     });
 
   res.json(teamPlayers);
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));
 });
 
 // Start server
