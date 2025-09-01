@@ -1,0 +1,53 @@
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+import json
+import time
+
+# Hardcoded team URLs (example)
+team_urls = {
+    "Seatlle Reign": "https://fbref.com/en/squads/257fad2b/Seattle-Reign-FC-Stats",
+    "Portland Thorns": "https://fbref.com/en/squads/df9a10a1/Portland-Thorns-FC-Stats",
+    "Washingtion Spirit": "https://fbref.com/en/squads/e442aad0/Washington-Spirit-Stats"
+    # add other teams here
+}
+
+all_players = []
+
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/116.0.5845.97 Safari/537.36"
+}
+
+for team_name, url in team_urls.items():
+    print(f"Scraping {team_name}...")
+    try:
+        response = requests.get(url, headers=headers)
+        if response.status_code != 200:
+            print(f"Failed to get {team_name}: {response.status_code}")
+            continue
+
+        soup = BeautifulSoup(response.text, "html.parser")
+        table = soup.find("table", id="matchlogs_for")  # or other player table id
+        if not table:
+            print(f"No table found for {team_name}")
+            continue
+
+        df = pd.read_html(str(table))[0]
+        df["Team"] = team_name
+        all_players.append(df)
+
+        # wait a bit to avoid being blocked
+        time.sleep(3)
+
+    except Exception as e:
+        print(f"Error scraping {team_name}: {e}")
+
+# Combine all teams
+if all_players:
+    all_players_df = pd.concat(all_players, ignore_index=True)
+    all_players_df.to_json("nwsl_players_2025_bs.json", orient="records")
+    print(f"Scraped {len(all_players_df)} players and saved to nwsl_players_2025_bs.json")
+else:
+    print("No players scraped.")
+
