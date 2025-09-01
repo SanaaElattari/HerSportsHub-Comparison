@@ -37,13 +37,13 @@ const Comparison = () => {
   useEffect(() => {
     const fetchAllPlayers = async () => {
       try {
-        const teamsRes = await fetch("http://localhost:3001/teams");
+        const teamsRes = await fetch("https://ersportshub-comparison.onrender.com/teams");
         const teams = await teamsRes.json();
 
         const allPlayersData = [];
         for (const team of teams) {
           const res = await fetch(
-            `http://localhost:3001/players?team=${encodeURIComponent(team)}`
+            `https://ersportshub-comparison.onrender.com/players?team=${encodeURIComponent(team)}`
           );
           const teamPlayers = await res.json();
           allPlayersData.push(...teamPlayers);
