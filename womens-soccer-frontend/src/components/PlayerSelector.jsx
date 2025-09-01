@@ -7,7 +7,7 @@ const PlayerSelector = ({ player, setPlayer, label, otherPlayer, setSelectedTeam
 
   // Fetch teams
   useEffect(() => {
-    fetch("https://ersportshub-comparison.onrender.com/teams")
+    fetch("/teams");
       .then((res) => res.json())
       .then((data) => setTeams(data))
       .catch((err) => console.error("Failed to load teams:", err));
@@ -17,7 +17,7 @@ const PlayerSelector = ({ player, setPlayer, label, otherPlayer, setSelectedTeam
   useEffect(() => {
     if (!selectedTeam) return;
 
-    fetch(`https://ersportshub-comparison.onrender.com/players?team=${encodeURIComponent(selectedTeam)}`)
+    fetch(`/players?team=${encodeURIComponent(selectedTeam)}`)
       .then((res) => res.json())
       .then((data) => {
         const filtered = data.filter(
