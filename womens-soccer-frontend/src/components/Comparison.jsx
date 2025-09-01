@@ -37,12 +37,12 @@ const Comparison = () => {
   useEffect(() => {
     const fetchAllPlayers = async () => {
       try {
-        const teamsRes = await fetch("/teams");
+        const teamsRes = await fetch("https://node-service-production.up.railway.app/teams");
         const teams = await teamsRes.json();
 
         const allPlayersData = [];
         for (const team of teams) {
-          const res = await fetch(`/players?team=${encodeURIComponent(team)}`);
+          const res = await fetch(`https://node-service-production.up.railway.app/players?team=${encodeURIComponent(team)}`);
           const teamPlayers = await res.json();
           allPlayersData.push(...teamPlayers);
         }
