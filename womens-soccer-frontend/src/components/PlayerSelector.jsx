@@ -17,7 +17,7 @@ const PlayerSelector = ({ player, setPlayer, label, otherPlayer, setSelectedTeam
   useEffect(() => {
     if (!selectedTeam) return;
 
-    fetch(`/players?team=${encodeURIComponent(selectedTeam)}`)
+    fetch(`https://node-service-production.up.railway.app/players?team=${encodeURIComponent(selectedTeam)}`)
       .then((res) => res.json())
       .then((data) => {
         const filtered = data.filter(
