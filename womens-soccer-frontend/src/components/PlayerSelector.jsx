@@ -7,7 +7,7 @@ const PlayerSelector = ({ player, setPlayer, label, otherPlayer, setSelectedTeam
 
   // Fetch teams
   useEffect(() => {
-    fetch("/teams");
+    fetch("/teams")
       .then((res) => res.json())
       .then((data) => setTeams(data))
       .catch((err) => console.error("Failed to load teams:", err));
