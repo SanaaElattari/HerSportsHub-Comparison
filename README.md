@@ -1,7 +1,10 @@
 # HerSportsHub-Comparison
 
+
 A web application for **comparing professional women’s soccer players** based on league statistics. This project provides an intuitive interface to analyze player performance, view radar charts, and compare individual stats with league averages.
 
+# Live Demo
+Check it out here: https://hersportscomp.up.railway.app/
 ---
 
 ## 🌟 Features
