@@ -217,7 +217,7 @@ const Comparison = () => {
       <h1 className="text-5xl font-extrabold text-center mb-4">
         <span className="text-purple-700">Her</span>
         <span className="text-green-500">Sports</span>
-        <span className="text-purple-700">Hub</span>
+        <span className="text-purple-700">Stats</span> 
       </h1>
       <p className="text-center text-gray-600 mb-8">
         Compare players' stats relative to league averages. The Better Player Score reflects raw totals weighted by position.

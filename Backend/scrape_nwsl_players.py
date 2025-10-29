@@ -24,10 +24,19 @@ team_urls = {
 
 all_players = []
 
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://www.google.com/",  # looks like a normal browser coming from a site
+}
+
+
 for team_name, url in team_urls.items():
     print(f"Scraping {team_name}...")
 
-    response = requests.get(url, headers={"User-Agent": "Mozilla/5.0"})
+    #response = requests.get(url, headers={"User-Agent": "Mozilla/5.0"})
+    response = requests.get(url, headers=headers)
+
     if response.status_code != 200:
         print(f"❌ Failed to retrieve {team_name}: {response.status_code}")
         continue
