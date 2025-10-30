@@ -2,6 +2,8 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 import warnings
+import time
+import random
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
@@ -25,9 +27,15 @@ team_urls = {
 all_players = []
 
 headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                  "AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/127.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.9",
-    "Referer": "https://www.google.com/",  # looks like a normal browser coming from a site
+    "Referer": "https://www.google.com/",
+    "DNT": "1",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1",
 }
 
 
@@ -62,6 +70,10 @@ for team_name, url in team_urls.items():
     df["Team"] = team_name
 
     all_players.append(df)
+
+    delay = random.uniform(2, 5)
+    print(f"⏳ Sleeping for {delay:.1f} seconds...")
+    time.sleep(delay)
 
 if all_players:
     players_df = pd.concat(all_players, ignore_index=True)
